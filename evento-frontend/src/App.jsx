@@ -1,22 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Events from './pages/Events';
-import Book from './pages/Book';
-import Success from './pages/Success';
-import Navbar from './components/Navbar';
+import './App.css';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/book/:id" element={<Book />} />
-        <Route path="/success" element={<Success />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      <header className="header">
+        <h1>🎉 Evento - Event Booking</h1>
+        <p>Find and book events effortlessly!</p>
+      </header>
+
+      <main>
+        <section className="event-list">
+          <h2>Upcoming Events</h2>
+
+          <div className="event-card">
+            <h3>Tech Conference 2025</h3>
+            <p>Date: 25th August 2025</p>
+            <p>Location: Hyderabad</p>
+            <button>Book Now</button>
+          </div>
+
+          <div className="event-card">
+            <h3>Music Festival</h3>
+            <p>Date: 10th September 2025</p>
+            <p>Location: Bangalore</p>
+            <button>Book Now</button>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
 
 export default App;
+
